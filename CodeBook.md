@@ -78,3 +78,6 @@ The tData.txt dataset contains the following variables
 The naming is closely related to the input data set.
 The value is the mean of all measurements grouped by subject and activity.
 
+The exact details for each feature can be read in some detail at this URL:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
