@@ -1,3 +1,5 @@
+library(dplyr)
+
 # Filenames
 X_test_data   <- 'test/X_test.txt'
 Y_test_data   <- 'test/y_test.txt'
@@ -77,5 +79,10 @@ mData <- translateActivity(mData, ncol(mData)-1)
 # Make columnnames more readable
 mData <- cleanUpLabels(mData)
 
+# Group the data by activity and subject and calculate the means
+# for all values in that group, excluding activity and subject
+tData <- ddply( mData, c('activity', 'subject'), 
+       function(z) colMeans(z[,-c(ncol(z)-1,ncol(z))]) )
 
-
+# Write the output
+write.table(tData, "tidyDataSet.txt", row.names = FALSE )
