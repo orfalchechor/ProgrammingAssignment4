@@ -1,30 +1,37 @@
----
-title: "README.md"
-author: "Bart Lupker"
-date: "July 9, 2016"
-output: html_document
----
+# run_analysis.R
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+## Synopsis
+
+This document describes the run_analysis script.
+The script takes as input a specific set of datafiles (see Input) and does some transformations on the data. The scripts output a tData.txt file, which contains the mean values of the mean and std values grouped subject and activity. 
+
+## Input
+
+The data this script operates on is download from this URL:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Details on the dataset can be found here:
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+## Execution 
+
+The script can only be run when in the directory where the zip file above is expanded.
+This means that the directories 'test' and 'train' must be available and contain the correct input files. There is no error checking.
+
+## Output
+
+The scripts outputs a textfile tData.txt which contains the mean values for all standard deviations and mean values in the source dataset, grouped by subject and activity. The output can be read into R by using the command:
+
+```
+read.table('tData.txt', header=TRUE)
 ```
 
-## R Markdown
+## Script details
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### Variables
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+The script uses variables to specify the input files. In the rest of the script references to those variables are used, so when a filename should change, only the variable at the top of the script needs to be changed.
 
-```{r cars}
-summary(cars)
-```
+### Functions
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+The script contains several 'helper' functions, which all have a single task. 

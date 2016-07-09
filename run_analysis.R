@@ -85,4 +85,4 @@ tData <- ddply( mData, c('activity', 'subject'),
        function(z) colMeans(z[,-c(ncol(z)-1,ncol(z))]) )
 
 # Write the output
-write.table(tData, "tidyDataSet.txt", row.names = FALSE )
+write.table(tData, "tData.txt", row.names = FALSE )

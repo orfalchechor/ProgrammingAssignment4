@@ -1,30 +1,80 @@
----
-title: "CodeBook.md"
-author: "Bart Lupker"
-date: "July 9, 2016"
-output: pdf_document
----
+# Code Book
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+## Variables
 
-## R Markdown
+The tData.txt dataset contains the following variables
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+* activity
+* subject
+* tbodyacc.mean.x
+* tbodyacc.mean.y
+* tbodyacc.mean.z
+* tbodyacc.std.x
+* tbodyacc.std.y
+* tbodyacc.std.z
+* tgravityacc.mean.x
+* tgravityacc.mean.y
+* tgravityacc.mean.z
+* tgravityacc.std.x
+* tgravityacc.std.y
+* tgravityacc.std.z
+* tbodyaccjerk.mean.x
+* tbodyaccjerk.mean.y
+* tbodyaccjerk.mean.z
+* tbodyaccjerk.std.x
+* tbodyaccjerk.std.y
+* tbodyaccjerk.std.z
+* tbodygyro.mean.x
+* tbodygyro.mean.y
+* tbodygyro.mean.z
+* tbodygyro.std.x
+* tbodygyro.std.y
+* tbodygyro.std.z
+* tbodygyrojerk.mean.x
+* tbodygyrojerk.mean.y
+* tbodygyrojerk.mean.z
+* tbodygyrojerk.std.x
+* tbodygyrojerk.std.y
+* tbodygyrojerk.std.z
+* tbodyaccmag.mean
+* tbodyaccmag.std
+* tgravityaccmag.mean
+* tgravityaccmag.std
+* tbodyaccjerkmag.mean
+* tbodyaccjerkmag.std
+* tbodygyromag.mean
+* tbodygyromag.std
+* tbodygyrojerkmag.mean
+* tbodygyrojerkmag.std
+* fbodyacc.mean.x
+* fbodyacc.mean.y
+* fbodyacc.mean.z
+* fbodyacc.std.x
+* fbodyacc.std.y
+* fbodyacc.std.z
+* fbodyaccjerk.mean.x
+* fbodyaccjerk.mean.y
+* fbodyaccjerk.mean.z
+* fbodyaccjerk.std.x
+* fbodyaccjerk.std.y
+* fbodyaccjerk.std.z
+* fbodygyro.mean.x
+* fbodygyro.mean.y
+* fbodygyro.mean.z
+* fbodygyro.std.x
+* fbodygyro.std.y
+* fbodygyro.std.z
+* fbodyaccmag.mean
+* fbodyaccmag.std
+* fbodybodyaccjerkmag.mean
+* fbodybodyaccjerkmag.std
+* fbodybodygyromag.mean
+* fbodybodygyromag.std
+* fbodybodygyrojerkmag.mean
+* fbodybodygyrojerkmag.std
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## Description
 
-```{r cars}
-summary(cars)
-```
+The naming is closely related to the input data set.
+The value is the mean of all measurements grouped by subject and activity.
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
